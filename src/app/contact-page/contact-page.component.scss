@@ -1,0 +1,62 @@
+@import "./../../../src/styles/variables.scss";
+
+.contact-us-wrapper {
+    padding: 110px 0;
+}
+
+.contact-us-wrapper {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.background-grey {
+    background-color: $background-grey;
+}
+
+.background-white {
+    background-color: $white;
+}
+
+.align-contact-form {
+    width: 50%;
+}
+
+.get-in-touch-wrapper {
+
+    a {
+        text-decoration: none;
+        color: $black;
+    }
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+::ng-deep .mat-mdc-form-field-required-marker {
+    color: $error-text;
+}
+
+.textarea-style {
+    height: 30px !important;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px){
+    .flex-direction {
+        flex-direction: column;
+    }
+
+    .contact-us-wrapper {
+        padding: 50px 0;
+    }
+
+    .align-contact-form {
+        width: 100%;
+    }
+}

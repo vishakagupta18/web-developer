@@ -1,0 +1,95 @@
+<div class="contact-us-container">
+    <div>
+        <div class="flex-display flex-direction">
+            <div class="background-grey align-contact-form">
+                <div class="flex-align contact-us-wrapper">
+                    <p class="primary-text font-bold line-height-3 font-30">CONTACT US</p>
+                    
+                    <div class="component-text">
+                        <p class="mb-20">
+                            We would love to speak with you. <br>
+                            Feel free to reach out using the below details.
+                        </p>
+                    </div>
+                    <div class="get-in-touch-wrapper mb-20">
+                        <span class="font-22 font-bold mb-20">Get In Touch</span>
+                        <div>
+                            <div class="line-height-25">
+                                <a href="tel:1-800-611-####">
+                                    <i class="fa-solid fa-phone mg-10"></i>
+                                    <span class="font-16">1-800-611-####</span>
+                                </a>
+                            </div>
+                            <div class="line-height-25">
+                                <a href="tel:604 ### 0600">
+                                    <i class="fa-solid fa-phone mg-10"></i>
+                                    <span class="font-16">604 ### 0600</span>
+                                </a>
+                            </div>
+                            <div class="line-height-25">
+                                <a href="tel:250 201 6600">
+                                    <i class="fa-solid fa-phone mg-10"></i>
+                                    <span class="font-16">250 ### ####</span>
+                                </a>
+                            </div>
+                            <div class="line-height-25">
+                                <a href="mailto:info@gmail.com" class="text-nowrap">
+                                    <i class="fas fa-envelope mg-10"></i>
+                                    <span class="font-16">###@gmail.com</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="font-22 font-bold mb-20">Hours</span>
+                        <p class="line-height-25">
+                            Mon-Fri 9:00AM - 6:00PM <br>
+                            Sat-Sun 10:00AM - 6:00PM
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="background-white align-contact-form">
+                <div class="flex-align contact-us-wrapper line-height-40">
+                    <p class="component-text mb-20">Fill out the form below and we will contact you as soon as possible!</p>
+                    <form [formGroup]="contactCustomerForm" (ngSubmit)="onSubmit(contactCustomerForm.value)">
+                        <div class="contact-form-container line-height-40">
+                            <mat-form-field class="form-field-width">
+                                <mat-label>Your Name </mat-label>
+                                <input matInput formControlName="name">
+                                <mat-error class="error-msg" *ngIf="errorHandling('name').invalid && (errorHandling('name').dirty || errorHandling('name').touched)">Name is required</mat-error>
+                            </mat-form-field>
+                        
+                            <mat-form-field class="form-field-width">
+                                <mat-label>Email </mat-label>
+                                <input matInput formControlName="email">
+                                <mat-error class="error-msg" *ngIf="errorHandling('email').invalid && !errorHandling('email').value && (errorHandling('email').dirty || errorHandling('email').touched)">Email is required.</mat-error>
+                                <mat-error class="error-msg" *ngIf="errorHandling('email').errors?.pattern">Please enter a valid e-mail address</mat-error>
+                            </mat-form-field>
+        
+                            <mat-form-field class="form-field-width">
+                                <mat-label>Phone Number </mat-label>
+                                <input matInput formControlName="phoneNumber">
+                                <mat-error class="error-msg" *ngIf="errorHandling('phoneNumber').invalid && !errorHandling('phoneNumber').value && (errorHandling('phoneNumber').dirty || errorHandling('phoneNumber').touched)">Phone Number is required</mat-error>
+                                <mat-error class="error-msg" *ngIf="errorHandling('phoneNumber').errors?.pattern">Only numbers and phone characters (#, -, *, etc) are accepted.</mat-error>
+                            </mat-form-field>
+        
+                            <mat-form-field class="form-field-width">
+                                <mat-label>Message </mat-label>
+                                <textarea matInput formControlName="message" class="textarea-style"></textarea>
+                            </mat-form-field>
+                            
+                            <button type="submit" mat-raised-button class="vg-btn vg-primary-btn" color="primary" 
+                                [disabled]="contactCustomerForm.invalid">
+                                <span class="text-white">SEND</span>
+                            </button>
+                            <!-- <button mat-button class="vg-btn vg-primary-btn text-white">Send</button> -->
+                        </div>
+                    </form>
+                <span *ngIf="!!formSubmitted"><i class="fa-solid fa-check"></i> {{formSubmitted}}</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

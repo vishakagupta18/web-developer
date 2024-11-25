@@ -1,0 +1,13 @@
+<div class="card-wrapper vg-container p-50-20" fxLayout="row wrap" fxLayoutGap="30px">
+    <mat-card class="services-card" *ngFor="let service of serviceList">
+        <img mat-card-image [src]=service.img alt="Service Image">
+        <mat-card-content>
+            <p class="font-bold heading-spacing">
+                {{service.serviceName}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="accent" class="primary-text book-now-btn italic-font text-nowrap" [routerLink]="service.link">Book Now ></button>
+        </mat-card-actions>
+    </mat-card>  
+</div>

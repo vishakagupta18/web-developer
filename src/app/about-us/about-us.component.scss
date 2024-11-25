@@ -1,0 +1,45 @@
+@import "./../../../src/styles/variables.scss";
+
+.aboutUs-container {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    background-color: $black;
+}
+
+.aboutUs-img {
+    background-image: url('./../../assets/images/about-us-image.png');
+    position: absolute;
+    background-color: rgba(0,0,0,0.1);
+    background-size: cover;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.aboutUs-text-overlap {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: $white;
+    text-align: center;
+}
+
+.main-heading {
+    font-size: 50px;
+    font-weight: 600;
+    font-family: "Roboto", Sans-serif;
+}
+
+.about-us-detail-img {
+    max-width: 375px;
+}
+
+@media only screen and (max-width: 768px){
+    .flex-direction {
+        flex-direction: column;
+    }
+}

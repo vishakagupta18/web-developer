@@ -1,0 +1,75 @@
+<div>
+    <!-- <div class="line-grey">
+        <section fxHide.lt-md="true" class="vg-container">
+            <div class="mg-10 pt-5">
+                <span>Your Trusted 24 Hours Home Service Provider !</span>
+                <span class="float-right">
+                    <a href="https://www.facebook.com/VG-Professionals-Renovation-110930144015111" target="_blank" class="icon-style fb-style">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/RenovationVg" target="_blank" class="icon-style twitter-style">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/vgprofessionals/" target="_blank" class="icon-style insta-style">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vg-renovation-professionals-378439211/" target="_blank" class="icon-style linkedIn-style">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCAEqcKPaF8tRzSm_8f4Jwaw" target="_blank" class="icon-style youtube-style">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </span>
+               
+            </div>
+        </section>
+    </div>  -->
+    
+    <section class="vg-container flex-display flex-direction-row">
+        <!-- <div class="flex-align" fxHide.lt-md="true">
+            <div> 
+                <i class="fa-solid fa-phone primary-text mg-6 contact-icons"></i>
+                <span>604.212.0600</span>
+            </div>
+            <div>
+                <a href="mailto:info@vgprofessionals.com">
+                    <i aria-hidden="true" class="fas fa-envelope primary-text mg-6 contact-icons"></i>
+                    <span class="secondary-text">info@vgprofessionals.com</span>
+                </a>
+            </div>
+        </div> -->
+        <div class="text-center flex-align">
+            <!-- <img src="assets/images/VG-Professionals-new-logo-1.jpg"> -->
+             <span class="logo-style">
+                <img src="./../../assets/images/Vishaka-Logo.png" width="300px"/>
+             </span>
+        </div>
+        <!-- <div class="flex-align" fxHide.lt-md="true">
+            <input type="button" class="float-right vg-btn vg-primary-btn btn-align" value="SCHEDULE A BOOKING">
+        </div> -->
+    </section>
+   
+    <mat-toolbar color="primary">
+        <div fxShow="true" fxHide.gt-sm="true">
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+        <section class="vg-container navbar-style">
+            <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="20px">
+                <div fxShow="true" fxHide.lt-md="true" layout="row" layout-align="center center" class="flex-display w-100"
+                  *ngFor="let menu of menuItems">
+                    <a class="flex-align menu-active" mat-button [routerLink]="menu.link" routerLinkActive="active">{{menu.name}}</a>
+                </div>
+            </div>
+        </section>
+    </mat-toolbar>
+
+    <mat-sidenav-container fxFlexFill class="sidebar-nav-container">
+        <mat-sidenav class="w-100 sidenav-style" color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
+            <div fxLayout="column" *ngFor="let menu of menuItems">
+                <a class="flex-start" (click)="sidenav.toggle()" mat-button [routerLink]="menu.link" routerLinkActive="active">{{menu.name}}</a>
+            </div>
+        </mat-sidenav>
+    </mat-sidenav-container>
+</div>

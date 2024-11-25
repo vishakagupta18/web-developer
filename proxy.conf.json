@@ -1,0 +1,9 @@
+
+  {
+    "/wp-admin": {
+      "target": "https://mywebsite.com",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }

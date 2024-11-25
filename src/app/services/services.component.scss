@@ -1,0 +1,15 @@
+.service-img {
+    width: 350px;
+    margin-top: 40px;
+}
+
+.service-svg {
+    opacity: 0.4;
+    transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 768px){
+    .flex-direction {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,18 @@
+<div>
+    <section class="slider-container">
+        <div class="slider-img slides slowFade">
+            <div class="slide" *ngFor="let slide of slides">
+                <img class="w-100" [src]=slide.path alt="img"/>
+            </div>
+        </div>
+        <section class="slider-text-overlap">
+            <p class="main-heading">Engineering marvel in Renovations</p><br/>
+            <p class="sub-heading">We provide all kind of Handyman and Contractor services at very competitive prices.</p>
+            <p class="sub-heading">Vancouver | Vancouver Island | Sunshine Coast | Whistler & Squamish</p>
+            <div class="slider-btn-wrapper">
+                <a class="vg-btn vg-primary-btn slider-btn" mat-button routerLink="/about-us" style="z-index: 9;">ABOUT US</a>
+                <a class="vg-btn vg-secondary-btn slider-btn" mat-button routerLink="/contact-us" style="z-index: 9;">CONTACT US</a>
+            </div>
+        </section>
+    </section>
+</div>

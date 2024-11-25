@@ -1,0 +1,305 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./styles/variables.scss";
+// @import "~ngx-owl-carousel-o/lib/styles/scss/owl-carousel";
+// @import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+
+* {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-size: 14px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-nowrap {
+    text-wrap: nowrap;
+}
+
+.mg-10 {
+    margin: 10px;
+}
+
+.mg-6 {
+    margin: 6px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.ml-5 {
+    margin-left: 5px;
+}
+
+.p-5 {
+    padding: 5px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.p-50-20 {
+    padding: 50px 20px;
+}
+
+.pt-40 {
+    padding-top: 40px;
+}
+
+.pt-5 {
+    padding-top: 5px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+.pl-20 {
+    padding-left: 20px;
+}
+
+.pr-20 {
+    padding-right: 20px;
+}
+
+hr {
+    color: $light-grey;
+}
+
+.flex-display {
+    display: flex;
+
+    .flex-align {
+        flex: 1;
+    }
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.flex-direction-col {
+    flex-direction: column;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-start {
+    justify-content: flex-start !important;
+}
+
+.flex-end {
+    justify-content: flex-end !important;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.line-grey {
+    border-bottom: 1px solid $light-grey;
+    padding-bottom: 10px;
+}
+
+.vg-container {
+    width: 80%;
+    // display: block;
+    margin: 10px auto;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.primary-text {
+    color: $primary-color !important;
+}
+
+.secondary-text {
+    color: $secondary-color !important;
+}
+
+.text-white {
+    color: $white !important;
+}
+
+
+.vg-btn {
+    border-radius: 4px;
+    color: $white;
+    border: 1px solid $white !important;
+    padding: 10px 30px !important;
+    cursor: pointer;
+}
+
+.vg-primary-btn {
+    background-color: $primary-color !important; 
+}
+
+.vg-secondary-btn {
+    background-color: $secondary-color !important;
+}
+
+.component-heading {
+    font-size: 35px;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+.component-text {
+    font-size: 16px;
+    font-family: "Roboto", Sans-serif;
+    line-height: 25px;
+}
+
+.italic-font {
+    cursor: pointer;
+
+    &:hover {
+        font-style: italic;
+    }
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.font-16 {
+    font-size: 16px;
+}
+
+.font-22 {
+    font-size: 22px;
+}
+
+.font-30 {
+    font-size: 30px;
+}
+
+.line-height-40 {
+    line-height: 40px;
+}
+
+.line-height-25 {
+    line-height: 25px;
+}
+
+.line-height-3 {
+    line-height: 3em;
+}
+
+.line-height-5 {
+    line-height: 5em;
+}
+
+.center-align {
+    margin: 0 auto;
+    display: block;
+}
+
+.vertical-center {
+    position: relative;
+    transform: translateY(30%);
+}
+
+.error-msg, .required-field {
+    color: $error-text;
+}
+
+
+/** Social Media Icon Styling **/
+
+.icon-style {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    color: $white;
+    font-size: 15px;
+    text-align: center;
+    margin: 5px;
+}
+
+.fixed-icon-style {
+    font-size: 25px;
+
+    i {
+        font-size: 25px;
+    }
+
+    &.fb-style {
+        padding: 4px 12px 4px 12px;
+    }
+    
+    &.twitter-style {
+        padding: 3px 8px 4px 8px;
+    }
+    
+    &.insta-style {
+        padding: 3px 9px 5px 9px;
+    }
+    
+    &.linkedIn-style {
+        padding: 3px 9px 5px 9px;
+    }
+    
+    &.github-style {
+        padding: 3px 6px 5px 6px;
+    }
+}
+
+.fb-style {
+    background-color: $facebook;
+    padding: 4px 10px 4px 10px;
+}
+
+.twitter-style {
+    background-color: $twitter;
+    padding: 3px 7px 4px 7px;
+}
+
+.insta-style {
+    background-color: $insta;
+    padding: 3px 8px 5px 8px;
+}
+
+.linkedIn-style {
+    background-color: $linkedIn;
+    padding: 3px 8px 5px 8px;
+}
+
+.github-style {
+    background-color: $yt;
+    padding: 3px 6px 5px 6px;
+}
+
+@media only screen and (min-width: 960px){
+    mat-sidenav-container {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    svg path {
+        transform: scale(2);
+        transform: translateX(10px);
+    }
+}
